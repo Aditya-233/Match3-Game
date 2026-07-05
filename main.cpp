@@ -37,8 +37,7 @@ int main(void) {
         for (int c = 0; c < G; c++)
             do {
                 board[r][c] = rand() % 5;
-            } while ((c >= 2 && board[r][c - 1] == board[r][c] && board[r][c - 2] == board[r][c]) ||
-                     (r >= 2 && board[r - 1][c] == board[r][c] && board[r - 2][c] == board[r][c]));
+            } while ((c >= 2 && board[r][c - 1] == board[r][c] && board[r][c - 2] == board[r][c]) || (r >= 2 && board[r - 1][c] == board[r][c] && board[r - 2][c] == board[r][c]));
 
     while (!WindowShouldClose()) {
         if (bgm.stream.buffer != nullptr) UpdateMusicStream(bgm);
